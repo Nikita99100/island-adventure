@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/island.png-f89a2a39c258831bd2831723ed849ff9.stex"
+path="res://.import/craftTable.png-ce5c639f211211ec2abce19705340661.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Env/island.png"
-dest_files=[ "res://.import/island.png-f89a2a39c258831bd2831723ed849ff9.stex" ]
+source_file="res://Sprites/UI/craftTable.png"
+dest_files=[ "res://.import/craftTable.png-ce5c639f211211ec2abce19705340661.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

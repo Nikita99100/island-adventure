@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/shtuki-druki.png-05d87f337dd4d85111ec73eb042c5ae8.stex"
+path="res://.import/shtuki-druki.png-8ee03d0dfa971a201398c66cff1a4057.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://musor/shtuki-druki.png"
-dest_files=[ "res://.import/shtuki-druki.png-05d87f337dd4d85111ec73eb042c5ae8.stex" ]
+source_file="res://Sprites/Items/shtuki-druki.png"
+dest_files=[ "res://.import/shtuki-druki.png-8ee03d0dfa971a201398c66cff1a4057.stex" ]
 
 [params]
 

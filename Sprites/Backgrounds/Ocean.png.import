@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ocean.png-4c1b9405a3253ef3085d59c8055fdaa2.stex"
+path="res://.import/Ocean.png-3b10fcb48775919ee3d4f4857f76dd6d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://background/Ocean.png"
-dest_files=[ "res://.import/Ocean.png-4c1b9405a3253ef3085d59c8055fdaa2.stex" ]
+source_file="res://Sprites/Backgrounds/Ocean.png"
+dest_files=[ "res://.import/Ocean.png-3b10fcb48775919ee3d4f4857f76dd6d.stex" ]
 
 [params]
 

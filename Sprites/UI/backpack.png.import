@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/backpack.png-bd8f73b56982124f88991f03394c3b4b.stex"
+path="res://.import/backpack.png-cd9cb558da0032cdd6edf1ea16cb72b2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://musor/backpack.png"
-dest_files=[ "res://.import/backpack.png-bd8f73b56982124f88991f03394c3b4b.stex" ]
+source_file="res://Sprites/UI/backpack.png"
+dest_files=[ "res://.import/backpack.png-cd9cb558da0032cdd6edf1ea16cb72b2.stex" ]
 
 [params]
 
