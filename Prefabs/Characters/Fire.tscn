@@ -6,6 +6,7 @@
 extents = Vector2( 6.97591, 10.7928 )
 
 [node name="Fire" type="RigidBody2D"]
+can_sleep = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 0.613 )

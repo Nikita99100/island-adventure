@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Prefabs/Island.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Env/BigTree.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Characters/Fire.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Characters/Marshmallow.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Items/Stone.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node2D"]
 
@@ -14,10 +16,24 @@ can_sleep = false
 [node name="BigTree" parent="Island" instance=ExtResource( 2 )]
 position = Vector2( 5.35772, -20.5801 )
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-zoom = Vector2( 0.5, 0.5 )
-smoothing_enabled = true
+[node name="Stone" parent="." instance=ExtResource( 5 )]
+position = Vector2( 38.196, -10.6112 )
 
 [node name="Fire" parent="." instance=ExtResource( 3 )]
-position = Vector2( -52.52, -151.297 )
+position = Vector2( -74.408, -7.62228 )
+
+[node name="Marshmallow" parent="." instance=ExtResource( 4 )]
+position = Vector2( -53.2846, -8.92752 )
+
+[node name="Camera2D" type="Camera2D" parent="Marshmallow"]
+position = Vector2( 53.2846, 8.92752 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+limit_bottom = 154
+limit_smoothed = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+drag_margin_left = 0.19
+drag_margin_top = 0.36
+drag_margin_right = 0.19
+editor_draw_drag_margin = true

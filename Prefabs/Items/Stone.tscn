@@ -7,6 +7,7 @@ radius = 5.87766
 height = 8.86975
 
 [node name="Stone" type="RigidBody2D"]
+can_sleep = false
 
 [node name="Stone" type="Sprite" parent="."]
 texture = ExtResource( 1 )
