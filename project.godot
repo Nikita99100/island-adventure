@@ -17,6 +17,9 @@ _global_script_class_icons={
 
 config/name="Island-adventure"
 run/main_scene="res://Scenes/World.tscn"
+boot_splash/image="res://icon.png"
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [display]
@@ -29,4 +32,5 @@ window/stretch/aspect="keep"
 
 [rendering]
 
+environment/default_clear_color=Color( 0.0666667, 0.541176, 0.72549, 1 )
 environment/default_environment="res://default_env.tres"

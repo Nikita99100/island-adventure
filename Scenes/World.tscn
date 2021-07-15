@@ -10,15 +10,15 @@
 [node name="World" type="Node2D"]
 
 [node name="Island" parent="." instance=ExtResource( 1 )]
-mode = 1
-gravity_scale = 0.0
-can_sleep = false
+speed_x = 1.0
+amplitude_divider_x = 100.0
+amplitude_divider_y = 200.0
 
 [node name="BigTree" parent="Island" instance=ExtResource( 2 )]
 position = Vector2( 5.35772, -20.5801 )
 
 [node name="Stone" parent="." instance=ExtResource( 5 )]
-position = Vector2( 38.196, -10.6112 )
+position = Vector2( 37.8623, -4.27071 )
 
 [node name="Fire" parent="." instance=ExtResource( 3 )]
 position = Vector2( -74.408, -7.62228 )
@@ -26,11 +26,11 @@ position = Vector2( -74.408, -7.62228 )
 [node name="Water" type="Node" parent="."]
 
 [node name="Sea" parent="Water" instance=ExtResource( 6 )]
-position = Vector2( -57.1512, 6.55582 )
+position = Vector2( -56.496, 9.174 )
 amplitude_divider_y = 70.0
 
 [node name="Sea2" parent="Water" instance=ExtResource( 6 )]
-position = Vector2( -17.929, 13.326 )
+position = Vector2( -18.81, 16.837 )
 speed_x = 2.0
 speed_y = 2.0
 amplitude_divider_y = 70.0
@@ -39,7 +39,10 @@ amplitude_divider_y = 70.0
 position = Vector2( -53.2846, -8.92752 )
 
 [node name="Camera2D" type="Camera2D" parent="Marshmallow"]
+offset = Vector2( 0, -28.394 )
 current = true
 zoom = Vector2( 0.282, 0.282 )
-offset_h = -0.01
-offset_v = -0.71
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true

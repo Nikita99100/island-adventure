@@ -7,8 +7,10 @@
 radius = 3.88177
 height = 182.12
 
-[node name="Island" type="RigidBody2D"]
+[node name="Island" type="KinematicBody2D"]
 script = ExtResource( 2 )
+speed_x = 4.0
+amplitude_divider_x = 1.0
 
 [node name="island" type="Sprite" parent="."]
 scale = Vector2( 1.5, 0.6 )
