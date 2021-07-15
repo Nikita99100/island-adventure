@@ -21,8 +21,11 @@ config/icon="res://icon.png"
 
 [display]
 
+window/size/width=800
+window/size/height=480
+window/dpi/allow_hidpi=true
 window/stretch/mode="viewport"
-window/stretch/aspect="keep_width"
+window/stretch/aspect="keep"
 
 [rendering]
 
