@@ -37,12 +37,15 @@ amplitude_divider_y = 70.0
 
 [node name="Marshmallow" parent="." instance=ExtResource( 4 )]
 position = Vector2( -53.2846, -8.92752 )
+JUMP_HEIGHT = 100
 
 [node name="Camera2D" type="Camera2D" parent="Marshmallow"]
 offset = Vector2( 0, -28.394 )
 current = true
 zoom = Vector2( 0.282, 0.282 )
+limit_bottom = 58
 drag_margin_h_enabled = true
 drag_margin_v_enabled = true
+smoothing_enabled = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
