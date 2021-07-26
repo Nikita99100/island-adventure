@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Prefabs/Island.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Env/BigTree.tscn" type="PackedScene" id=2]
@@ -6,16 +6,69 @@
 [ext_resource path="res://Prefabs/Characters/Marshmallow.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Items/Stone.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Env/Sea.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scripts/GameManager.gd" type="Script" id=7]
+
+[sub_resource type="Animation" id=2]
+resource_name = "IslandAnim"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, -1.826 ), Vector2( 0, -4.134 ), Vector2( 0, -1.826 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+resource_name = "sea-anim"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sea:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.3, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -56.496, 22 ), Vector2( -56.496, 20 ), Vector2( -56.496, 22 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sea2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -75, 31 ), Vector2( -75, 33.254 ), Vector2( -75, 31 ) ]
+}
 
 [node name="World" type="Node2D"]
+script = ExtResource( 7 )
+SeaSpeed = 0.0
 
 [node name="Island" parent="." instance=ExtResource( 1 )]
-speed_x = 1.0
-amplitude_divider_x = 100.0
-amplitude_divider_y = 200.0
+position = Vector2( 0, -3.05073 )
+script = null
 
 [node name="BigTree" parent="Island" instance=ExtResource( 2 )]
 position = Vector2( 5.35772, -20.5801 )
+
+[node name="IslandAnim" type="AnimationPlayer" parent="Island"]
+autoplay = "IslandAnim"
+playback_speed = 0.2
+anims/IslandAnim = SubResource( 2 )
 
 [node name="Stone" parent="." instance=ExtResource( 5 )]
 position = Vector2( 37.8623, -4.27071 )
@@ -26,14 +79,15 @@ position = Vector2( -74.408, -7.62228 )
 [node name="Water" type="Node" parent="."]
 
 [node name="Sea" parent="Water" instance=ExtResource( 6 )]
-position = Vector2( -56.496, 9.174 )
-amplitude_divider_y = 70.0
+position = Vector2( -56.496, 20.6769 )
 
 [node name="Sea2" parent="Water" instance=ExtResource( 6 )]
-position = Vector2( -18.81, 16.837 )
-speed_x = 2.0
-speed_y = 2.0
-amplitude_divider_y = 70.0
+position = Vector2( -75, 31.8029 )
+
+[node name="SeaAnimation" type="AnimationPlayer" parent="Water"]
+autoplay = "sea-anim"
+playback_speed = 0.3
+anims/sea-anim = SubResource( 1 )
 
 [node name="Marshmallow" parent="." instance=ExtResource( 4 )]
 position = Vector2( -53.2846, -8.92752 )

@@ -1,13 +1,42 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://TileSets/env_tileset.tres" type="TileSet" id=1]
-[ext_resource path="res://Scripts/Sea.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/Env/SeaItem.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
 
 [node name="Sea" type="Node2D"]
-script = ExtResource( 2 )
 
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = ExtResource( 1 )
-cell_size = Vector2( 57, 64 )
-format = 1
-tile_data = PoolIntArray( 65523, 0, 0, 65525, 0, 0, 65527, 0, 0, 65529, 0, 0, 65531, 0, 0, 65533, 0, 0, 65535, 0, 0, 1, 0, 0, 3, 0, 0, 5, 0, 0, 7, 0, 0, 9, 0, 0, 11, 0, 0 )
+[node name="SeaItem" parent="." instance=ExtResource( 1 )]
+position = Vector2( -200, 0 )
+
+[node name="SeaItem2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -85, 0 )
+
+[node name="SeaItem3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 30, 0 )
+
+[node name="SeaItem4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 145, 0 )
+
+[node name="SeaItem5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 260, 0 )
+
+[node name="SeaItem6" parent="." instance=ExtResource( 1 )]
+position = Vector2( -315, 0 )
+
+[node name="SeaItem7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 375, 0 )
+
+[node name="RightCorner" type="Area2D" parent="."]
+position = Vector2( 375, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightCorner"]
+position = Vector2( 177.5, 0 )
+shape = SubResource( 1 )
+
+[node name="LeftCorner" type="Area2D" parent="."]
+position = Vector2( -315, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftCorner"]
+position = Vector2( -0.234528, 0 )
+shape = SubResource( 1 )

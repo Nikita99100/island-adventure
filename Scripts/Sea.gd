@@ -14,8 +14,8 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
-	move_local_x(-sin(i/speed_x)/amplitude_divider_x);
-	move_local_y(-cos(i/speed_y)/amplitude_divider_y);
+	move_local_x(-sin(i*speed_x)/amplitude_divider_x);
+	move_local_y(-cos(i*speed_y)/amplitude_divider_y);
 	i+=delta*2;
 	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
